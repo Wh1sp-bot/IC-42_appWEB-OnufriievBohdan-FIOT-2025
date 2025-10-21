@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>GachiFit — Головна</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <div class="container">
@@ -18,29 +18,27 @@
         </div>
       </div>
 
-      <!-- Десктоп меню -->
       <ul class="desktop">
-        <li>Головна</li>
-        <li>Готові Тренування</li>
-        <li>Про Нас</li>
-        <li><button class="btn">Увійти</button></li>
-        <li><button class="btn-primary">Реєстрація</button></li>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="workouts.html">Готові Тренування</a></li>
+        <li><a href="exercises.html">Вправи</a></li>
+        <li><a href="#about">Про Нас</a></li>
+        <!-- Ці кнопки видаляємо для залогінених -->
+        <li><a href="login.html" id="navLogin" class="btn">Увійти</a></li>
+        <li><a href="register.html" class="btn-primary">Реєстрація</a></li>
       </ul>
+      
 
-      <!-- Мобільне меню -->
       <ul class="mobile">
-        <li>Головна</li>
-        <li>Готові Тренування</li>
-        <li>Про Нас</li>
-        <li><button class="btn">Увійти</button></li>
-        <li><button class="btn-primary">Реєстрація</button></li>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="workouts.html">Готові Тренування</a></li>
+        <li><a href="#about">Про Нас</a></li>
+        <li><a href="login.html" class="btn">Увійти</a></li>
+        <li><a href="register.html" class="btn-primary">Реєстрація</a></li>
       </ul>
 
-      <!-- BURGER -->
-      <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="burger" aria-label="menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
       </div>
     </nav>
 
@@ -50,8 +48,8 @@
         <h1>Фітнес Цілей <span class="accent">Разом З GachiFit</span></h1>
         <p class="lead">Приєднуйся до спільноти GachiFit та трансформуй свій шлях у фітнесі. Наші досвідчені тренери та персоналізовані програми допоможуть тобі досягти цілей і перевершити власні очікування.</p>
         <div class="hero-ctas">
-          <button class="btn-primary" id="startBtn">Розпочати</button>
-          <button class="btn">Програми</button>
+          <a href="workouts.html" class="btn-primary" id="startBtn">Розпочати</a>
+          <a href="workouts.html" class="btn">Програми</a>
         </div>
 
         <div class="stats">
@@ -64,7 +62,7 @@
 
       <div class="hero-right">
         <div class="hero-circle">
-          <img class="hero-img" src="res/hero.png" alt="hero" loading="lazy" />
+          <img class="hero-img" src="../res/hero.png" alt="hero" loading="lazy" />
         </div>
         <div class="badge top">+80 Тренерів</div>
         <div class="badge bot-left">+100 Програм</div>
@@ -72,20 +70,20 @@
       </div>
     </section>
 
-    <section class="section">
+    <section id="services" class="section">
       <h2>Наші Послуги</h2>
       <p class="subtitle">На цьому етапі ти легко можеш отримати доступ до всіх наших сервісів. Переглянь їх і обери будь-який, який тобі до вподоби.</p>
       <div class="cards">
         <div class="card">
-          <img src="res/losing-weight.png" alt="losing weight" />
+          <img src="../res/losing-weight.png" alt="losing weight" />
           <div class="title">Losing Weight</div>
         </div>
         <div class="card">
-          <img src="res/building-muscle.png" alt="building" />
+          <img src="../res/building-muscle.png" alt="building" />
           <div class="title">Building Muscle</div>
         </div>
         <div class="card">
-          <img src="res/home-training.png" alt="home training" />
+          <img src="../res/home-training.png" alt="home training" />
           <div class="title">Home Training</div>
         </div>
       </div>
@@ -94,38 +92,22 @@
         <div>
           <h3>Приєднуйся До Нашої Фітнес Спільноти</h3>
           <p class="subtitle">Зареєструйся зараз, щоб отримати ексклюзивний доступ до персоналізованих планів тренувань, професійного наставництва та підтримки спільноти.</p>
-
-          <div class="features">
-            <div class="feature">
-              <strong>Персоналізовані Плани</strong>
-              <div class="feature-desc">План тренувань, що відповідає твоїм цілям і рівню підготовки.</div>
-            </div>
-            <div class="feature">
-              <strong>Професійні Тренери</strong>
-              <div class="feature-desc">Сертифіковані тренери, що супроводжують на кожному етапі.</div>
-            </div>
-            <div class="feature">
-              <strong>Підтримка На Кожному Етапі</strong>
-              <div class="feature-desc">Особисті консультації та підтримка 24/7.</div>
-            </div>
-            <div class="feature">
-              <strong>Ексклюзивні Ресурси</strong>
-              <div class="feature-desc">Відеоуроки, рецепти та доступ до спільноти.</div>
-            </div>
-          </div>
         </div>
 
         <div class="form">
           <h3>Реєстрація</h3>
           <form id="signup">
-            <label for="name">Ваше ім'я</label>
-            <input id="name" name="name" placeholder="Введіть ваше ім'я" required />
-            <label for="email">E-Пошта</label>
-            <input id="email" name="email" type="email" placeholder="Введіть вашу E-пошту" required />
+            <label for="name">Логін (ім'я)</label>
+            <input id="name" name="name" placeholder="Введіть логін" required />
+            <label for="email">E-Пошта (необов'язково)</label>
+            <input id="email" name="email" type="email" placeholder="Введіть вашу E-пошту" />
+            <label for="password">Пароль</label>
+            <input id="password" name="password" type="password" placeholder="Придумайте пароль" required />
             <div class="submit">
               <button type="submit" class="btn-primary">Sign Up</button>
             </div>
           </form>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px">Після реєстрації ви можете увійти на сторінці "Увійти".</div>
         </div>
       </div>
     </section>
@@ -134,7 +116,7 @@
       <div class="footer-top">
         <div>
           <div class="footer-logo">
-            <img src="res/logo.png" alt="GachiFit Logo" />
+            <img src="../res/logo.png" alt="GachiFit Logo" />
             <span>GachiFit</span>
           </div>
           <div class="footer-desc">Трансформуй своє тіло з GachiFit — твоїм надійним партнером у фітнесі. Ми маємо понад 5 років досвіду та пропонуємо професійне наставництво.</div>
@@ -148,6 +130,6 @@
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GachiFit — Профіль</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <div class="logo">GF</div>
+        <div>
+          <div class="brand-name">GachiFit</div>
+          <div class="brand-subtitle">Користувач</div>
+        </div>
+      </div>
+
+      <ul class="desktop">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="workouts.html">Готові Тренування</a></li>
+        <li><a href="user.html">Мій Профіль</a></li>
+        <li class="logout-li"><a href="#" class="logout-btn">Вийти</a></li>
+      </ul>
+
+      <div class="burger" aria-label="menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <section class="section">
+      <h2>Мій Профіль</h2>
+      <p class="subtitle">Ваш персональний профіль з інформацією про акаунт та тренування.</p>
+    
+      <div class="profile-grid">
+        <div class="card profile-card">
+          <h3 id="profileName">Ім'я</h3>
+          <p id="profileEmail">email@example.com</p>
+          <p id="profileSince" class="subtitle">Зареєстрований: --</p>
+        </div>
+    
+        <div class="card">
+          <h3>Мої Програми</h3>
+          <ul id="userPrograms">
+            <li>Full Body — 3 дні на тиждень</li>
+            <li>Cardio Boost — 4 тижні</li>
+          </ul>
+        </div>
+    
+        <div class="card">
+          <h3>Статистика</h3>
+          <p>Завершено тренувань: <strong>12</strong></p>
+          <p>Час у тренуваннях: <strong>8 годин</strong></p>
+        </div>
+      </div>
+    
+      <section id="history" style="margin-top:20px">
+        <h3>Історія дій</h3>
+        <div class="feature-desc">Ваші останні дії в системі:</div>
+        <ul style="margin-top:12px;color:var(--muted)" id="historyList"></ul>
+      </section>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <img src="../res/logo.png" alt="GachiFit Logo" />
+            <span>GachiFit</span>
+          </div>
+          <div class="footer-desc">Трансформуй своє тіло з GachiFit — твоїм надійним партнером у фітнесі.</div>
+        </div>
+        <div class="footer-info">
+          <p><span class="icon">📍</span> Україна, Київ</p>
+          <p><span class="icon">✉️</span> <a href="mailto:gachifit@mail.com">gachifit@mail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 GachiFit — Всі права захищені</div>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
