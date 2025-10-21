@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GachiFit — Адмін-панель</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <div class="logo">GF</div>
+        <div>
+          <div class="brand-name">GachiFit</div>
+          <div class="brand-subtitle">Адмін</div>
+        </div>
+      </div>
+
+      <ul class="desktop">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="workouts.html">Готові Тренування</a></li>
+        <li><a href="admin.html">Адмін-панель</a></li>
+        <li class="logout-li"><a href="#" class="logout-btn">Вийти</a></li>
+      </ul>
+
+      <div class="burger" aria-label="menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <section class="section">
+      <h2>Адміністраторська частина</h2>
+      <p class="subtitle">CRUD над користувачами з реальним збереженням у localStorage + експорт/імпорт JSON.</p>
+
+      <div style="display:flex;gap:12px;align-items:center;margin-top:10px;">
+        <button id="btnAddUser" class="btn-primary">Додати користувача</button>
+        <button id="btnExport" class="btn">Експорт JSON</button>
+        <input id="importFile" type="file" accept="application/json" style="display:none" />
+        <button id="btnImport" class="btn">Імпорт JSON</button>
+        <div style="color:var(--muted);margin-left:8px">Адмін: <strong>admin</strong> / <strong>admin</strong></div>
+      </div>
+
+      <section id="users" style="margin-top:18px;">
+        <table class="admin-table" id="usersTable">
+          <thead>
+            <tr>
+              <th>Ім'я</th>
+              <th>Е-пошта</th>
+              <th>Роль</th>
+              <th>Дата</th>
+              <th>Дія</th>
+            </tr>
+          </thead>
+          <tbody><!-- rendered by JS --></tbody>
+        </table>
+      </section>
+    </section>
+
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <h3 id="modalTitle">Додати користувача</h3>
+        <form id="modalForm">
+          <label for="mName">Логін</label>
+          <input id="mName" required />
+          <label for="mEmail">E-пошта</label>
+          <input id="mEmail" type="email" />
+          <label for="mRole">Роль</label>
+          <select id="mRole">
+            <option value="user">user</option>
+            <option value="admin">admin</option>
+          </select>
+          <label for="mPass">Пароль (при створенні або зміні)</label>
+          <input id="mPass" type="password" placeholder="залиште порожнім щоб не змінювати" />
+          <div class="submit" style="margin-top:12px">
+            <button type="submit" class="btn-primary">Зберегти</button>
+            <button type="button" id="modalClose" class="btn">Скасувати</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <img src="../res/logo.png" alt="GachiFit Logo" />
+            <span>GachiFit</span>
+          </div>
+          <div class="footer-desc">Адмін-панель — демонстраційна частина.</div>
+        </div>
+        <div class="footer-info">
+          <p><span class="icon">📍</span> Україна, Київ</p>
+          <p><span class="icon">✉️</span> <a href="mailto:gachifit@mail.com">gachifit@mail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 GachiFit — Всі права захищені</div>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
