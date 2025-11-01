@@ -1,0 +1,1 @@
+const express=require('express');const r=require('../controllers/UserController');const router=express.Router();router.get('/',r.list);router.get('/:id',r.get);router.post('/',r.create);router.put('/:id',r.update);router.delete('/:id',r.remove);module.exports=router;
